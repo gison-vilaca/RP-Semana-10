@@ -7,8 +7,8 @@ public class Questao_1 {
 
         for(int x = 0; x < img.length; x++){
             for(int y = 0; y < img[0].length; y++){
-                //     S  =(L-1)- r
-                img[x][y] = 255 - img[x][y];
+                //     S  =                          (L-1)- r
+                img[x][y] = Math.min(255, Math.max(0, 255 - img[x][y]));
             }
         }
         ImagemDigital.plotarImagem(img, "Versão Negativa");
